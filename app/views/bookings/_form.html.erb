@@ -1,0 +1,9 @@
+
+<br>
+<%= simple_form_for [@game, Booking.new] do |b| %>
+  <%= b.date_field :start_date, html5: true, min: Date.today, %>
+  <%= b.date_field :end_date, html5: true, min: Date.today, %>
+  <%= b.submit data: {game_id: @game.id,} %>
+<% end %>
+<br>
+<br>

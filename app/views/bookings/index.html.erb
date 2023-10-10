@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="d-flex justify-content-center" style="padding-left:10px; padding-top:30px">Hi <%= current_user.firstname %>, here's what's coming up...</h2>
+    <div class="row">
+      <% @bookings.order([:start_date, :desc]).each do |b| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card-product">
+            <img src="<%= b.game.image %>">
+            <div class="card-product-infos">
+              <h4><%=b.game.title%></h4>
+              <p>FROM: <%= b.start_date.strftime('%a %d %b') %>
+              <p>UNTIL: <%= b.end_date.strftime('%a %d %b') %>
+              <%= link_to booking_path(b),method: :delete,
+              data: {confirm: "are you sure?"} do %>
+              <p class="text-success">cancel<i class="fas fa-trash"></i></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+</div>

@@ -1,0 +1,7 @@
+<h3>
+<%= @booking.game.title %>
+</h3>
+<br>
+<img src="<%= @booking.game.image %>">
+<br>
+<p>From <%= @booking.start_date.strftime('%a %d %b') %> | Until: <%= @booking.end_date.strftime('%a %d %b')%> </p>

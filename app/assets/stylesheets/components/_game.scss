@@ -1,0 +1,35 @@
+.container-game {
+    padding: 10px 80px 10px 80px;
+    background-color: rgb(255, 255, 255);
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.game-image {
+    background-size: cover;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.game-image img {
+    width: 100%;
+}
+.booking-card {
+    border: solid;
+    border-color: lightgrey;
+    border-radius: 5px;
+}
+
+.game-description {
+    padding-top: 20px;
+}
+
+.custom-class {
+    margin-bottom: 0px;
+}
+
+.game-title {
+    padding-top: 30px;
+}
